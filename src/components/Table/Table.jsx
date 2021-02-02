@@ -10,7 +10,7 @@ const Thead = () => (
 
 const Tbody = ({ data }) => (
     <tbody>
-        {data.map(({ name, job, email}) => (
+        {data.map(({ name, job, email }) => (
         <tr key={name}>
             <td>{name}</td>
             <td>{job}</td>

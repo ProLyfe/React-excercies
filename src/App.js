@@ -1,33 +1,18 @@
-import Table from './components/Table/Table';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from './components/Home';
+import About from './components/About';
+import Users from './components/Users';
+import Navbar from './components/Navbar';
+import Routeur from "./components/Route/Routeur";
+import NoMatch from "./components/404";
+
 const App = () => {
 
-  const Data = [
-    {
-      name: 'Yanis',
-      job: 'Dev',
-      email: 'test@gmail.com',
-    },
-    {
-      name: 'Lorem',
-      job: 'Designer',
-      email: 'lorem@orange.fr',
-    },
-    {
-      name: 'Ipsum',
-      job: 'DevOps',
-      email: 'ipsum@free.fr',
-    },
-    {
-      name: 'Delta',
-      job: 'Prof',
-      email: 'charlie@delta.com',
-    },
-  ]
-
-  return (
-    <div className="App">
-        <Table data={Data}/>
-    </div>
+return (
+  <>
+    <Routeur />
+    <NoMatch />
+  </>
   );
 }
 
