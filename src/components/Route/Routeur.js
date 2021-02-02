@@ -18,7 +18,7 @@ const Routeur = () => (
         <Route path="/">
           <Home />
         </Route>
-        <Route path="*" component={NoMatch}>
+        <Route path="*">
             <NoMatch />
         </Route>
       </Switch>

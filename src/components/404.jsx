@@ -1,16 +1,22 @@
 import React from 'react';
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
-const NoMatch = (props) => {
-
-    console.log('props :', props)
+function NoMatch() {
+    let location = useLocation();
+  
     return (
       <div>
-        <h3>
-          No match for
-        </h3>
+       <h1>Page introuvable</h1>
+       
+        <Link to="/" title="Revenir sur la page principale">
+           Retour sur la page d'accueil
+        </Link>
+            
+        <br/>
+        <code>Page : {location.pathname}</code>
       </div>
     );
-  };
+  }
 
-export default NoMatch;
+export default NoMatch  
